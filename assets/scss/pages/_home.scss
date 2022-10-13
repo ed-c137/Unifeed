@@ -1,0 +1,101 @@
+///////===========Layout===============//////////@at-root
+header.main{
+    padding-top: 30px;
+}
+
+.button-wrap{
+    margin: 38px 0;
+}
+
+.article{
+    // margin-bottom: 3rem;
+    clear: both;
+    @include media-breakpoint-up(md){
+        .blog-thumb-first{
+            width: 400px;
+            margin-right: 40px;
+        }
+    }
+}
+
+
+
+.btn{
+    padding: 14px 24px;
+    @include fontA;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    
+    background-color: v(color-accent);
+    color: v(black);
+    
+    //efect for button press
+    transition-duration: .2s;
+    perspective: 1000px;
+    transform-origin: center bottom 0px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    // @include media-breakpoint-up(sm){
+    //     width: auto;
+    // }
+}
+.btn:active {
+    transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+}
+
+.btnA{
+    background: v(color-primary);
+    color: v(black);
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.2s ease;
+    will-change: transform;
+    padding: 18px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    @include fontA;
+    border-radius: var(--radius-md, 3px);
+    span{
+        vertical-align: super;
+    }
+}
+
+.btnA:hover,
+.btnA:focus{
+    background: hsla(48, 100%, 75%, 1);
+}
+
+.btnA:active{
+    transform: translateY(2px);
+}
+
+.btn-user-box{
+    padding: 3px 4px;
+    font-size: 18px;
+    border-radius: 2px;
+    &:hover{
+        background-color: v(content-background);
+    }
+}
+
+.main-wrapper{
+    margin-top: 49px;
+    margin-bottom: 70px;
+}
+
+.article{
+    margin-bottom: 40px;
+    >p{
+        padding: 16px 0;
+    }
+}
+.pub-info{
+    >img{
+        height: 62px;
+        width: 62px;
+    }
+}
